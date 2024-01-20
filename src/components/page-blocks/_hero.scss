@@ -1,0 +1,180 @@
+.slider {
+	display: flex;
+	align-items: center;
+	width: 70.5rem;
+	height: 31.5rem;
+	opacity: 0.8;
+	&-wrapper {
+		position: relative;
+	}
+	&-slide {
+		display: flex;
+		justify-content: space-between;
+		width: 70.5rem;
+		height: 31.5rem;
+		position: relative;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		border-radius: 1.5rem;
+		background-color: $duim_intense_blue;
+		&::after {
+			position: absolute;
+			width: 75.5rem;
+			height: 45rem;
+			content: '';
+			background: url(../img/hero-slider-bg.png),
+				lightgray 0px -191.546px / 100% 134.302% no-repeat;
+			mix-blend-mode: color-burn;
+			padding-left: 0;
+			// background-size: cover;
+		}
+	}
+	&__left {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 34rem;
+		padding-left: 1.5rem;
+		&-title {
+			color: $duim_white;
+			font-family: 'Rubik';
+			font-size: 2.125rem;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 3rem; /* 141.176% */
+			margin-bottom: 0.5rem;
+		}
+		&-subtitle {
+			color: $duim_white;
+			font-family: 'Manrope';
+			font-size: 1.125rem;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 2rem; /* 177.778% */
+		}
+	}
+	&__right {
+		img {
+			width: 21.5rem;
+			padding-right: 1.5rem;
+		}
+	}
+}
+.slider__btnbox {
+	position: absolute;
+	display: flex;
+	width: 7rem;
+	height: 3rem;
+	right: 1.5rem;
+	bottom: 1.5rem;
+	z-index: 12;
+}
+.slider-button-next,
+.slider-button-prev {
+	position: absolute;
+	width: 3rem;
+	height: 3rem;
+	padding: 0.75rem;
+	background: #ffffff;
+	border: 1px solid $duim_silver_blue;
+	border-radius: 0.625rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 8;
+	cursor: pointer;
+	transition: all 0.5s ease;
+
+	&:hover {
+		border: 1px solid $duim_graphite_black;
+	}
+}
+.slider-pagination.swiper-pagination {
+	bottom: 36px;
+	width: auto;
+	left: 0;
+	right: 0;
+}
+.swiper-pagination-bullet {
+	width: 0.5rem;
+	height: 0.5rem;
+	background-color: $duim_white;
+	transition: all 0.25s;
+	margin: 0 0.5rem !important;
+}
+.swiper-pagination-bullet-active {
+	transform: scale(1.5);
+}
+.slider-button-next:after,
+.slider-button-prev:after {
+	position: absolute;
+	content: '';
+	width: 6rem;
+	height: 100%;
+	top: 10px;
+	right: 31px;
+	z-index: 6;
+}
+.slider-button-prev {
+	transform: rotate(180deg);
+	left: 0;
+}
+.button-slider {
+	width: 8.8rem;
+	margin-top: 1.5rem;
+}
+.hero__offer {
+	position: relative;
+	width: 22.5rem;
+	height: 31.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	border-radius: 1.5rem;
+	border: 1px solid rgba(0, 75, 141, 0.1);
+	background: $duim_white;
+	padding-top: 2.5rem;
+	padding-left: 2rem;
+	padding-right: 2px;
+	padding-bottom: 0;
+	&-title {
+		color: $duim_intense_blue;
+		font-variant-numeric: lining-nums proportional-nums;
+		font-family: 'Rubik';
+		font-size: 1.375rem;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 2rem; /* 145.455% */
+		margin-bottom: 1rem;
+	}
+	&-subtitle {
+		color: $duim_graphite_black;
+		font-variant-numeric: lining-nums proportional-nums;
+		font-family: 'Manrope';
+		font-size: 1rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 1.5rem; /* 150% */
+	}
+	&-btn {
+		width: 10.6rem;
+		display: flex;
+		padding: 0.75rem 1rem;
+		align-items: center;
+		border-radius: 0.625rem;
+		border: 1px solid $duim_graphite_black;
+		background: $duim_white;
+		margin-top: 1.5rem;
+		svg {
+			margin-left: 0.25rem;
+		}
+	}
+	img {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 11.25rem;
+		height: 14.9375rem;
+	}
+}

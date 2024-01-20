@@ -1,0 +1,88 @@
+$duim_graphite_black: #383a3d;
+$duim_gray_blue: #f3f4f8;
+$duim_intense_blue: #004b8d;
+$duim_orange_yellow: #fdbb30;
+$duim_red_orange: #e03d39;
+$duim_silver_blue: #91a5b7;
+$duim_white: #fff;
+$Red: #eb5757;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+}
+
+html,
+body {
+	min-height: 100%;
+	position: relative;
+	background-color: $duim_gray_blue;
+	color: $duim_graphite_black;
+	font-family: 'Manrope';
+}
+
+body {
+	font-size: 1rem;
+}
+
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+a {
+	color: $duim_graphite_black;
+	font-family: 'Manrope';
+	font-size: 1rem;
+	text-decoration: none;
+	font-style: normal;
+	font-weight: 400;
+	transition: all 0.5s ease;
+	&:hover {
+		color: $duim_intense_blue;
+		.arrow {
+			transform: rotate(-180deg);
+		}
+	}
+}
+.container {
+	max-width: 96.25rem;
+	margin: 0 auto;
+	padding: 0 0.95rem;
+}
+
+.button {
+	z-index: 14;
+	display: inline-flex;
+	padding: 0.75rem 2rem;
+	align-items: center;
+	gap: 0.25rem;
+	border-radius: 0.625rem;
+	color: $duim_graphite_black;
+	font-family: 'Manrope';
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 1.5rem;
+	opacity: 1;
+	&:hover {
+		background-color: #feca58;
+		color: $duim_graphite_black;
+	}
+}
+.button-ylw {
+	background: $duim_orange_yellow;
+	/* 150% */
+}

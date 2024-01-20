@@ -1,0 +1,273 @@
+.header-top {
+	height: 3.5rem;
+	max-height: 100%;
+	border-bottom: 1px solid rgba(0, 75, 141, 0.1);
+	a {
+		color: $duim_graphite_black;
+		font-family: 'Manrope';
+		font-size: 1rem;
+		text-decoration: none;
+		font-style: normal;
+		font-weight: 400;
+		transition: all 0.5s ease;
+		&:hover {
+			color: $duim_intense_blue;
+			.arrow {
+				transform: rotate(-180deg);
+			}
+		}
+	}
+	&__nav {
+		display: flex;
+		justify-content: flex-start;
+	}
+}
+.arrow {
+	margin-left: 0.2rem;
+	transition: all 0.5s ease;
+}
+.header__top-nav-item:first-child {
+	padding-left: 0;
+	color: $Red;
+	&:hover {
+		color: $Red;
+	}
+}
+.header__top-nav-item {
+	padding: 0 1rem;
+}
+.circle {
+	color: $Red;
+	position: relative;
+	&::after {
+		position: absolute;
+		content: '';
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: #eb5757;
+		right: 5%;
+		top: 5%;
+	}
+}
+
+.phone {
+	text-align: right;
+	font-variant-numeric: lining-nums proportional-nums;
+	font-family: Manrope;
+	font-size: 1.125rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 1.5rem;
+	margin-left: 3.5rem;
+}
+.header-mid {
+	padding: 2rem 0;
+}
+.header__search {
+	display: flex;
+	align-items: center;
+}
+.logo {
+	max-width: 17.7rem;
+	width: 100%;
+	display: block;
+}
+.header__logo {
+	height: auto;
+	margin-right: 2.5rem;
+}
+.btn {
+	height: 3.5rem;
+	display: flex;
+	align-items: center;
+	padding: 1rem 1.75rem 1rem 1.5rem;
+	align-items: center;
+	text-align: center;
+	border-radius: 1rem;
+	background: $duim_intense_blue;
+	color: $duim_white;
+	font-family: Manrope;
+	font-size: 1.125rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 1.5rem;
+	cursor: pointer;
+	transition: all 0.5s ease;
+	margin-right: 1rem;
+	&:hover {
+		color: $duim_white;
+		opacity: 0.9;
+	}
+	&:active {
+		color: $duim_white;
+		opacity: 0.9;
+	}
+	svg {
+		width: 1.5rem;
+		height: 1.5rem;
+		padding-right: 0.5rem;
+	}
+}
+.search {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 44.5625rem;
+	height: 3.5rem;
+	padding: 1rem 1.25rem;
+	border-radius: 1rem;
+	border: 1px solid rgba(0, 75, 141, 0.16);
+	background: $duim_white;
+	transition: all 0.5s ease;
+	z-index: 1;
+	svg {
+		position: absolute;
+		cursor: pointer;
+		z-index: 2;
+		right: 2%;
+		&:hover {
+			path {
+				transition: all 0.5s ease;
+
+				fill: $duim_graphite_black;
+			}
+		}
+	}
+	&:hover {
+		border: 1px solid $duim_graphite_black;
+	}
+
+	&__form {
+		display: block;
+		width: 100%;
+	}
+	&__input {
+		display: block;
+		outline: none;
+		border: none;
+		background-clip: padding-box;
+		width: 100%;
+		&::placeholder {
+			color: $duim_silver_blue;
+			font-size: 1rem;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 1.5rem;
+		}
+	}
+}
+
+.header__link {
+	padding-left: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	span {
+		color: $duim_silver_blue;
+		transition: all 0.5s ease;
+	}
+	svg {
+		transition: all 0.5s ease;
+		path {
+			stroke: $duim_silver_blue;
+		}
+	}
+	&:hover {
+		span {
+			color: $duim_graphite_black;
+		}
+		svg {
+			path {
+				stroke: $duim_graphite_black;
+			}
+		}
+	}
+}
+
+.swiper-cat {
+	height: 2rem;
+	margin-bottom: 2rem;
+	margin-top: 2rem;
+	display: flex;
+	align-items: center;
+
+	&-link {
+		color: $duim_graphite_black;
+		font-family: 'Manrope';
+		font-size: 1rem;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 1.5rem; /* 150% */
+
+		span {
+			transition: all 0.5s ease;
+			color: $duim_silver_blue;
+			font-family: 'Manrope';
+			font-size: 1rem;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 1.5rem;
+			margin-left: 0.12rem; /* 150% */
+		}
+		&:hover {
+			span {
+				color: $duim_graphite_black;
+			}
+		}
+	}
+	&-slide {
+		white-space: nowrap;
+		flex-shrink: 1;
+		display: flex;
+		align-items: center;
+		padding-right: 2rem;
+	}
+}
+.swiper-cat-button-next,
+.swiper-cat-button-prev {
+	position: absolute;
+	width: 2rem;
+	height: 2rem;
+	background: #ffffff;
+	border: 1px solid $duim_silver_blue;
+	border-radius: 0.625rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 8;
+	top: 22px;
+	right: 0;
+	cursor: pointer;
+	transition: all 0.5s ease;
+	&:hover {
+		border: 1px solid $duim_graphite_black;
+	}
+}
+.swiper-cat-button-next:after,
+.swiper-cat-button-prev:after {
+	position: absolute;
+	content: '';
+	width: 6rem;
+	height: 100%;
+	top: 0px;
+	right: 31px;
+	z-index: 6;
+	background: linear-gradient(
+		270deg,
+		#f3f4f8 0,
+		rgba(243, 244, 248, 0.98) 24%,
+		rgba(243, 244, 248, 0) 100%
+	);
+}
+.swiper-cat-button-prev {
+	transform: rotate(180deg);
+	left: 0;
+}
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+	display: none;
+}
