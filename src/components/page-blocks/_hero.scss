@@ -363,3 +363,23 @@
 		border: 1px solid rgba(0, 75, 141, 0.16);
 	}
 }
+
+@media screen and (max-width: 420px) {
+	.slider {
+		width: auto;
+	}
+	.slider__left-title {
+		font-size: 1.5rem;
+		line-height: 2rem;
+	}
+	.slider__left-subtitle {
+		font-size: 1rem;
+		line-height: 1.2rem;
+	}
+	.slider__btnbox {
+		bottom: 1.2rem;
+	}
+	.slider-pagination.swiper-pagination {
+		display: none;
+	}
+}

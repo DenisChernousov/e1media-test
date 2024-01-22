@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
 fetch('data.json')
 	.then(response => response.json())
 	.then(data => {
-		// Создание элементов меню на основе данных
 		const menuContainer = document.getElementById('menuContainer')
 		const rightInnerContainers = document.querySelectorAll(
 			'.modal__right-inner'
@@ -79,3 +78,20 @@ fetch('data.json')
 		})
 	})
 	.catch(error => console.error('Ошибка загрузки данных:', error))
+
+document.addEventListener('DOMContentLoaded', function () {
+	const burgerIcon = document.querySelector('.burger-icon')
+	const burgerMenu = document.querySelector('.burger-menu')
+
+	burgerIcon.addEventListener('click', function () {
+		burgerMenu.style.display =
+			burgerMenu.style.display === 'block' ? 'none' : 'block'
+	})
+
+	const burgerMenuItems = document.querySelectorAll('.burger-menu a')
+	burgerMenuItems.forEach(item => {
+		item.addEventListener('click', function () {
+			burgerMenu.style.display = 'none'
+		})
+	})
+})
