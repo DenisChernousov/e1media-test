@@ -289,6 +289,7 @@
 }
 
 .burger-icon {
+	display: none;
 	font-size: 2rem;
 	color: $duim_graphite_black;
 	cursor: pointer;
@@ -322,6 +323,9 @@
 	}
 	.header__search {
 		flex-wrap: wrap;
+	}
+	.burger-icon {
+		display: block;
 	}
 	.catalog-btn {
 		margin: 0 auto;
